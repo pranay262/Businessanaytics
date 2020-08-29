@@ -1,0 +1,143 @@
+---
+title: "Univariate Exploration for Numeric Variables"
+output: html_notebook
+author: "Ashish Khandelwal"
+---
+#################################################################################################
+Important Note - The results you see in the video and in this notebook may diverge slightly due to differences in the datasets (we provide small dataset to you).
+##################################################################################################
+
+```{r}
+#install.packages("ggplot2")
+#install.packages("dplyr")
+library(dplyr)
+library(ggplot2)
+library(stringr)
+```
+
+Read the data as df
+```{r}
+df <- read.csv("ities_prem.csv")
+```
+
+
+
+Histogram for Price 
+```{r, fig.height= 6, fig.width=12}
+p1 <- ggplot(data = df, mapping = aes(x = Price))
+
+p1 + geom_histogram(bins = 200) # play with this argument "bins"
+```
+
+
+
+Histogram for Price  - Zooming in on a narrow range of Y to get a better view
+```{r, fig.height= 6, fig.width=12}
+p2 <- p1 + geom_histogram(bins = 200) + coord_cartesian(ylim = c(0,50))
+p2
+```
+
+
+
+
+Histogram for Price - Log transforming our data to see if better picture emerges 
+```{r, fig.height= 10, fig.width=12}
+p1_log <- ggplot(data = df, mapping = aes(x = log(Price)))
+
+p2_log <- p1_log + geom_histogram(bins = 30) # play with this argument 
+p2_log
+```
+
+
+
+
+Density instead of Count
+```{r, fig.height= 6, fig.width=12}
+p2_log <- p1_log + geom_histogram(aes(y = ..density..), bins=50) # density shows proprotions instead of count
+
+p2_log 
+```
+
+
+
+Boxplot for Price
+
+```{r, fig.height= 6, fig.width=12}
+p1 <-  ggplot(data = df, mapping = aes(y = Price))
+
+p2 <- p1 + geom_boxplot()
+
+p2
+```
+
+
+We see many outliers. There are very high value of prices. May be these are catering orders. 
+
+
+Zoom into a smaller range for Price (0-50) to see if we can see the boxplot. 
+```{r, fig.height= 6, fig.width=12}
+p1 <-  ggplot(data = df, mapping = aes(y = Price))
+
+p2 <- p1 + geom_boxplot() + coord_cartesian(ylim = c(0,50))
+
+p2
+```
+
+
+Still many outliers. 
+
+
+
+Boxplot on log(Price) 
+```{r, fig.height= 6, fig.width=12}
+p1_log <-  ggplot(data = df, mapping = aes(y = log(Price)))
+
+p2_log <- p1_log + geom_boxplot()
+
+p2_log
+```
+
+
+Due to log transformation, there are a few outliers on the lower side also. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

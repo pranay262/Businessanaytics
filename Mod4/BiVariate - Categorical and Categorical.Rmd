@@ -1,0 +1,68 @@
+---
+title: "BiVariate - Categorical and Categorical"
+output: html_notebook
+author: "Ashish Khandelwal"
+---
+#################################################################################################
+Important Note - The results you see in the video and in this notebook may diverge slightly due to differences in the datasets (we provide small dataset to you).
+##################################################################################################
+
+```{r}
+#install.packages("ggplot2")
+#install.packages("dplyr")
+library(dplyr)
+library(ggplot2)
+library(stringr)
+```
+
+Read the data as df
+```{r}
+df <- read.csv("ities_prem.csv")
+```
+
+Create data with Count for each Department and Weekday Combination
+
+```{r}
+cross_tab <- xtabs(~Department +WeekDay, data=df)
+department <- rownames(cross_tab)
+weekday <- colnames(cross_tab)
+
+df1 <- expand.grid(department,weekday)
+Count <- as.vector(cross_tab)
+df1$Count <- Count
+```
+
+
+Check what's in the df1
+```{r}
+df1
+```
+
+Var1 is Department and Var2 is the weekday. Count shows the count for department and day combination. 
+
+The number of Observations for each Department for Each day of the week
+```{r, fig.height=6, fig.width=6}
+p1 <- ggplot(data = df1, aes(x= Var1, y = factor(Var2), size = Count))
+
+p2 <- p1 + geom_point(col = "red") + labs(x = "Department", y="Weekday") # since our variables are read as var1 and var2, we need to provide labels using the "labs" function.
+
+p2
+
+```
+
+One very easy way to create the graph above is using the following code. This uses a simple and elegant geom_object "geom_count". 
+
+However, the one shown above takes you through the details of xtables, which you may also use to assess the relationship by observing numbers in the df1. 
+```{r, fig.height=6, fig.width=6}
+p1 <- ggplot(data = df, aes(x= Department, y = factor(WeekDay)))
+
+p2 <- p1 + geom_count(color = "red")
+p2
+```
+
+
+
+
+
+
+

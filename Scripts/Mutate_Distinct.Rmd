@@ -1,0 +1,46 @@
+---
+title: "Feature Creation Using Mutate Function"
+output: html_notebook
+author: "Ashish Khandelwal"
+---
+
+#####################################################################################################
+## Important Note - The results you see in the video and in this notebook may diverge slightly due to 
+## differences in the datasets (we provide small dataset to you).
+#####################################################################################################
+
+
+Mutate - from dplyr package 
+
+Load the package. Fisrt install, if not installed already
+```{r}
+library(dplyr)
+```
+
+Read the data as df
+```{r}
+df  <- read.csv("ities.csv")
+```
+
+Mutate function to create a new column
+
+
+You specify two things for each column you want to create: name of the new column and the way to create the column
+
+In the column below, we create a variable "premium" on the basis of price being higher than mean + 2 std dev
+We use the ifelse function to create the new column named "Premium". Ifelse works the same way it works in Excel. 
+```{r}
+df <- df %>% mutate(Premium = ifelse(Price > (mean(Price, na.rm=TRUE)+ 2*sd(Price, na.rm=TRUE)),1,0))
+```
+
+In "(mean(Price, na.rm=TRUE)+ 2*sd(Price, na.rm=TRUE)", we use "na.rm =TRUE" to ask R to ignore if there are missing values. Mean, sum, etc. won't work without this "na.rm=TRUE" if there are missing values.  
+
+We can check the LineItems in the premium category now. 
+
+Below, we filter the rows where premium is 1 and then select the column LineItem.  Using distinct function allows us to get the unique names of the LineItems 
+```{r}
+premium_items <- df %>% filter(Premium == 1) %>% select(LineItem) %>% distinct()
+
+premium_items
+```
+

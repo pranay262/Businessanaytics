@@ -1,0 +1,56 @@
+---
+title: "Introduction to ggplot2 syntax"
+output: html_notebook
+author: "Ashish Khandelwal"
+---
+#################################################################################################
+Important Note - The results you see in the video and in this notebook may diverge slightly due to differences in the datasets (we provide small dataset to you).
+##################################################################################################
+
+```{r}
+#install.packages("ggplot2")
+#install.packages("dplyr")
+library(dplyr)
+library(ggplot2)
+library(stringr)
+```
+
+Read the data as df
+```{r}
+df <- read.csv("C:/Users/ashis/OneDrive/Data/ities_prem.csv")
+```
+
+
+1) First component of ggplot - Data 
+
+We specify the dataframe name in the ggplot function and save the object created in "p"
+```{r fig.height= 6, fig.width=12}
+p <- ggplot(data = df)
+
+p
+```
+
+2) Second component of ggplot - Aesthetics Mapping --> mapping = aes()
+
+
+```{r, fig.height= 6, fig.width=12}
+p1 <- ggplot(data = df, mapping = aes(x = Price))
+
+p1
+```
+
+
+3) Third component of ggplot - Geometric Object - For example, Histogram, Boxplot, Scatter Plot
+
+```{r, fig.height= 6, fig.width=12}
+
+p2 <- p1 + geom_histogram(bins = 200) # The object p1 is the one created above
+
+# We could have used the following command also
+
+p2 <- ggplot(data = df, mapping = aes(x = Price)) + geom_histogram(bins = 200)
+
+p2
+```
+
+

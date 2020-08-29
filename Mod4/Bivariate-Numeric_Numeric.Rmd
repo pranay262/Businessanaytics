@@ -1,0 +1,136 @@
+---
+title: "Bi-Variate_Numerical_Numerical"
+output: html_notebook
+author: "Ashish Khandelwal"
+---
+#################################################################################################
+Important Note - The results you see in the video and in this notebook may diverge slightly due to differences in the datasets (we provide small dataset to you).
+##################################################################################################
+
+```{r}
+#install.packages("ggplot2")
+#install.packages("dplyr")
+library(dplyr)
+library(ggplot2)
+library(stringr)
+```
+
+Read the data as df
+```{r}
+# df <- read.csv("ities_prem.csv")
+```
+
+
+Here we will focus on creating visualizations for assesing association between two numeric variables. 
+
+Scatter Plot is used to visualize relationship between two numeric variables. It's a common practice to show the predictor on the x-axis and outcome variable on the Y-axis. 
+
+Outcome - in the modeling context, an outcome variable is the one that we try to predict based on some other variable(s), which is/ are called as predictor(s).
+
+In our data, we have two useful numeric variables: price and quanity. We may test the whether the law of demand holds in our data?
+
+The law of demand states "as price goes up, the quantity demanded goes down".  
+
+Let's visualize relationship between Price and Quantity
+
+Note - Usually, the predictor is mapped on to the x-axis and outcome variable on to the Y-axis. However, as a convention economists have been flipping the coordinates; keeping Price on Y axis and Quanity on the x-axis.
+
+
+
+```{r,fig.width= 12, fig.height=6}
+p1 <- ggplot(data = df, mapping = aes(x= Quantity, y = Price)) 
+
+p2 <- p1 + geom_point() # geom_point is used to create a scatter plot. 
+
+p2
+```
+We may want to add a line to the scatter plot to see on average what is the relationship. 
+
+Adding Line to a Scatter Plot
+
+```{r, fig.width= 12, fig.height=6}
+p1 <- ggplot(data = df, mapping = aes(x= Quantity, y = Price)) 
+
+p2 <- p1 + geom_point() + geom_smooth() # geom_smooth is added to create a fitting line
+
+p2
+```
+
+
+The relationship doesn't look as we expected. We were expecting a downward sloping line and not an L-shaped one. This could be due to very high range for price and quantity. 
+
+We may want to see how the linearship holds for log values of price and quantity vs on the idenity scale. Identity means no transformation.  
+
+Correlation between Price and Quantity on Identity Scale
+
+Correlation between Price and Quantity on LOG Scale
+
+```{r}
+print(cor(df$Price, df$Quantity))
+print(cor(log(df$Price), log(df$Quantity)))
+```
+
+We see a stronger negtaive linear relationship between Quantity and Price on log scale. 
+
+Thus, we will log transform these variables and plot them to check if clearer patter emerges
+
+Scatter Plot with variables on the Log Scale
+
+```{r, fig.width= 12, fig.height=6}
+p1 <- ggplot(data = df, mapping = aes(x= log(Quantity), y = log(Price))) 
+
+p2 <- p1 + geom_point() + geom_smooth(method="lm") 
+
+p2
+```
+
+
+
+
+In a latter lesson, we will discuss how we may test if the same pattern holds in both prmeium and non premium LineItems. 
+
+Let's try subsetting our data for only premium products (defined on the basis of price) to see if the pattern is different. 
+
+
+Here I am subsetting the data based on Premium column that we created. Premium ==1 means the price for these lInItems was more than 2 std deviations + mean. 
+```{r}
+p1 <- ggplot(data = df %>% filter(Premium ==1), mapping = aes(x= log(Quantity), y = log(Price))) 
+
+p2 <- p1 + geom_point() + geom_smooth(method="lm", se= FALSE) 
+
+p2
+```
+
+When we see the same relationship for the premium transactions only, we see there is no variation in the Quantity. The quantity value is almost always 1 except two points. This line should not be interpreted. 
+
+In fact, I can show you why there is problem with this line. In the geom_smooth function above, I have silenced one defualt option - se ( which is standard error, which is nothing but the degree of uncertainty attached with our estimates. This uncertainty is very high, when we are making estimates on very small values.). Let me switch the "se" on, and you can see for yourself. 
+
+
+```{r}
+p1 <- ggplot(data = df %>% filter(Premium ==1), mapping = aes(x= log(Quantity), y = log(Price))) 
+
+p2 <- p1 + geom_point() + geom_smooth(method="lm", se= TRUE) 
+
+p2
+```
+
+Do you notice there the se error band is so wider here becuase the line is supported by only two points, which may not be reliable. 
+
+
+
+Let's see the other subset of the data, the non-premium one.
+
+Investigate for non_premium products (defined on the basis of price) to see if the pattern is different. 
+
+
+```{r}
+p1 <- ggplot(data = df %>% filter(Premium !=1), mapping = aes(x= log(Quantity), y = log(Price))) 
+
+p2 <- p1 + geom_point() + geom_smooth(method="lm", se= TRUE) 
+
+p2
+```
+
+Here we do see the there is some sort of a negtive relationship between Price and Quantity. And the "se" bands are much tighter unlike in the case of premium products. This is because there are many datapoint supporting the line everywhere. 
+
+

@@ -1,0 +1,85 @@
+---
+title: "Multi-dimensional plots"
+output: html_notebook
+---
+
+#################################################################################################
+Important Note - The results you see in the video and in this notebook may diverge slightly due to differences in the datasets (we provide small dataset to you).
+##################################################################################################
+
+```{r}
+#install.packages("ggplot2")
+#install.packages("dplyr")
+library(dplyr)
+library(ggplot2)
+library(stringr)
+```
+
+Read the data as df
+```{r}
+df <- read.csv("ities_prem.csv")
+```
+
+Multidimensional plotting
+In multidimensional plotting, we visualize relationship between more than two variables. 
+
+In this notebook, we will show examples of plotting two nuemrical and one categorical variable. 
+Apart from X-axis and y-axis, other variables can be mapped to either "color", "size", and "shape". 
+
+Visualizing how the relationship between Price and Quantity varies for premium vs non-premium products. Note that we oursleves loosely defined the premium and non-premium category based on the price itself. 
+
+
+Remember that each variable specified must be mapped to an aesthetic. 
+
+We will map the variable "Premium" to color aesthatics, and price to y-axis and quantity to x-axis. We will use the log values of price and quantity as on the identity scale the relationship is not strong as we saw earlier. 
+
+```{r}
+p1 <- ggplot(data = df, mapping = aes(x= log(Quantity), y = log(Price), col = factor(Premium))) 
+
+p2 <- p1 + geom_point() + geom_smooth(method="lm", se= TRUE) 
+
+p2
+```
+
+Both the lines look parrallel, thus we don't think there is a pattern here. But we should not make any strong claim here because the green line lacks reliability due to very small number of points supporting it. The grey colored fan that you see around the grren line is "standard error". You may understand standard error as a measure of uncertainity. 
+
+If you recollect what we discussed in video on "what to explore in the data", you would know that what we have is the sample of data and not the whole population. Thus, we need to acocutn for any uncertainity that may be there if we make any claim about the population based on the sample data.  
+
+Let's see if poeple in Illinois prefer beef products. We can compare the sales of beef vs non-beef products also. However, I would like to test if the price senitivity is lower for beef-products. 
+
+First let's define what are beef-products? Simple definition - the ones which has "beef" in their name
+
+Let's create a column that shows whether the product has beef in it's name?
+```{r}
+df <- df %>% mutate(Beef = ifelse(str_detect(LineItem, "Beef"),1,0))
+
+```
+
+Now see the relationship between Price and Quantity for beef vs non-beef products. 
+We will map beef to color aesthetics 
+```{r, fig.height=8, fig.width=10}
+p1 <- ggplot(data = df, mapping = aes(x= log(Quantity), y = log(Price), col = factor(Beef))) 
+
+p2 <- p1 + geom_point() + geom_smooth(method="lm", se= TRUE) # se is standard error. it's shown by default. If you want to the grey band of standard error, you must set it to FALSE. 
+
+p2
+```
+
+The slope of beef-products "green line" is mcuh steeper (remember the predictor is on Y-axis, thus interpret the plot accordingly).
+
+Thus, we notice the price senstivity is higher for beef products. 
+
+
+Example of bad usage of aesthetic mapping. 
+
+Below, I show you a bad example of aesthetic mapping. Here, I will map the product type "Beef" to "shape" instead of "color".
+
+You will notice the visual appeal and inetrpretation are highly compromised in the graph below. 
+```{r, fig.height=8, fig.width=10}
+p1 <- ggplot(data = df, mapping = aes(x= log(Quantity), y = log(Price), shape = factor(Beef))) 
+
+p2 <- p1 + geom_point() + geom_smooth(method="lm", se= TRUE) 
+
+p2
+```
+

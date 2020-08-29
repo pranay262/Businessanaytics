@@ -1,0 +1,86 @@
+---
+title: "Dplyr Filter and Select Notebook"
+output: html_notebook
+author: "Ashish Khandelwal"
+---
+#####################################################################################################
+## Important Note - The results you see in the video and in this notebook may diverge slightly due to 
+## differences in the datasets (we provide small dataset to you).
+#####################################################################################################
+
+
+This is an R Notebook and not an R script. Here, we need not use "#" to make comments. However, to differentiate between comments and code we use back ticks ``` before and after the code. 
+
+As you can see below, comments are typed without "#". Code is written in what is called a code chunk.
+
+Code chunk is created and ended by ```. Thus, anything typed between two sets of backticks is cosndiered a code in R Notebook. 
+
+
+Lesson Goals- 
+
+In this lesson we will discuss two functions:
+
+1) Filter  - for filtering rows 
+
+2) Select - for selecting columns 
+
+```{r}
+install.packages("dplyr")
+library("dplyr")
+```
+
+
+In the command below, we read the dataset as "df" 
+```{r}
+df <- read.csv("ities.csv", stringsAsFactors = FALSE)  # make sure the data "ities.csv" is in your working directory
+```
+
+Filter 
+Filter function takes two arguments: 
+i) dataframe
+ii) column with the condition 
+
+
+1. Select all the rows where cost > 11
+
+```{r}
+df_cost_greater_11 <- filter(df, Cost > 11)
+```
+
+
+Multiple Conditions 
+
+2. Select all the rows where cost > 11 and Price < 15
+```{r}
+df_cost_11_price_13 <- filter(df, Cost > 11 & Price > 13)
+```
+
+
+3. Select all the rows where cost > 11 OR Price < 15
+```{r}
+df_cost_11_price_13 <- filter(df, Cost >11 | Price>13)
+```
+
+
+Select
+Select function takes two arguments: 
+i) dataframe
+ii) column name(s). If multiple columns they need to be separated by a ",".  
+
+1. Select the column Cost
+```{r}
+df_cost <- select(df, Cost)
+```
+
+
+2. Select both Cost and Price
+```{r}
+df_Cost_Price <- select(df, Cost, Price) 
+```
+
+
+
+
+
+
+

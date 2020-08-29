@@ -1,0 +1,91 @@
+---
+title: "Visualizing Relationship between a Numeric and a Categorical Variable"
+output: html_notebook
+author: "Ashish Khandelwal"
+---
+
+#################################################################################################
+Important Note - The results you see in the video and in this notebook may diverge slightly due to differences in the datasets (we provide small dataset to you).
+##################################################################################################
+
+```{r}
+#install.packages("ggplot2")
+#install.packages("dplyr")
+library(dplyr)
+library(ggplot2)
+library(stringr)
+```
+
+Read the data as df
+```{r}
+df <- read.csv("ities_prem.csv")
+```
+
+
+Bivariate - Numerical-categorical Variables 
+
+When we want to look for a relationship between a numerical and a categorical variable, we se can create grouped histograms, boxplots or violin plots. Violin plots shows the density on the vertical axis.  
+
+We can create separate histograms for a numerical variable based on two or more categories. 
+
+
+Relationship between Price and Premium category - We show this example, only for visualization. It just shows what we expect because we ourselves created the variable "premium" based on price cutoff. 
+
+We want to see if the patterns in Price become more informative when we subset the data into two categories. let's see. 
+
+
+```{r, fig.height= 6, fig.width=12}
+p1_log <- ggplot(data = df, mapping = aes(x = log(Price), fill = factor (Premium)))
+
+p2_log <- p1_log + geom_histogram(aes(y = ..density..), alpha = 0.6)
+
+
+p2_log 
+```
+
+We should not try to read much here because ourselves created this variable. Thus, we see maximum separation between the two catgeories. 
+
+
+Visualizing Relationship between Price and Department to check how Price varies by Department.
+
+Visualization through a Histogram - You will see that it doesn't inform much. 
+
+```{r, fig.height= 6, fig.width=12}
+p1_log <- ggplot(data = df, mapping = aes(x = log(Price), fill = Department))
+
+p2_log <- p1_log + geom_histogram(aes(y = ..density..), alpha = 0.6, bins= 50) # play with alpha- choose values between 0 and 1 and see what happens. 
+
+
+p2_log 
+```
+
+
+
+
+Let's see a boxplot by Departments
+
+```{r}
+p1_log <-  ggplot(data = df, mapping = aes(y = log(Price), fill = Department))
+
+p2_log <- p1_log + geom_boxplot() 
+
+p2_log
+```
+
+This is a much better vsiualziation. This shows that Pirces tend to vary across departments, catering commanding highest prices (which is obvious) followed by giftcards. Also notice that within some departments prices vary much more than in others. For example, there is hardly any variation in Swag and Beverages prices. For general the distribution is is much wider. Also notice the presence of outliers is some departments vs others. Entrees has the highest number of outliers on either side. 
+
+
+
+Violin Plot - This is a combination of Histogram (shows frequency) and boxplot 
+
+Visualize the relationship between Premium category and Price. Again, this is for purely visualizing what we already know. 
+
+```{r}
+p1  <- ggplot(data =df, mapping = aes(x = factor(Premium),y= log(Price), fill = factor(Premium))) + geom_violin()
+
+p1
+```
+
+The shape of the violin plot shows that for premium products the prices are higher (as expected). We also notice that there are more values at the lower end of distribution of the premium products than on the higher end. Did you expect the latter observation?
+
+

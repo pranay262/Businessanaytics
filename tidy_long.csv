@@ -1,0 +1,189 @@
+"","LineItem","CashierName","Quantity","CustomerSatisfaction"
+"1","Aubergine and Chickpea Vindaloo","Katherine Roth",1.36231884057971,0.990235802609155
+"2","Aubergine and Chickpea Vindaloo","Rachael Price",1.30555555555556,0.990235802609155
+"3","Aubergine and Chickpea Vindaloo","Trinidad Johnson",1,0.990235802609155
+"4","Aubergine and Chickpea Vindaloo","Vincent Ball",1.50602409638554,0.990235802609155
+"5","Beef and Apple Burgers","Katherine Roth",1.01136363636364,0.325210194219805
+"6","Beef and Apple Burgers","Rachael Price",1,0.325210194219805
+"7","Beef and Apple Burgers","Trinidad Johnson",1,0.325210194219805
+"8","Beef and Apple Burgers","Vincent Ball",1.01543209876543,0.325210194219805
+"9","Beef and Apple Burgers - Illini Bhangra","Katherine Roth",1.33572320651944,0.527040931234548
+"10","Beef and Apple Burgers - Illini Bhangra","Rachael Price",1.25954210124625,0.527040931234548
+"11","Beef and Apple Burgers - Illini Bhangra","Trinidad Johnson",1.22914122914123,0.527040931234548
+"12","Beef and Apple Burgers - Illini Bhangra","Vincent Ball",15,0.527040931234548
+"13","Beef and Broccoli","Katherine Roth",1.01863354037267,0.0272822456527746
+"14","Beef and Broccoli","Rachael Price",1.02717391304348,0.0272822456527746
+"15","Beef and Broccoli","Trinidad Johnson",1,0.0272822456527746
+"16","Beef and Broccoli","Vincent Ball",1.11650485436893,0.0272822456527746
+"17","Beef and Broccoli Side","Katherine Roth",1.5,0.906459799813206
+"18","Beef and Broccoli Side","Rachael Price",1,0.906459799813206
+"19","Beef and Broccoli Side","Trinidad Johnson",1.22914122914123,0.906459799813206
+"20","Beef and Broccoli Side","Vincent Ball",1.33333333333333,0.906459799813206
+"21","Beef and Broccoli Side Wolfram","Katherine Roth",1.33572320651944,0.153400140592587
+"22","Beef and Broccoli Side Wolfram","Rachael Price",1.25954210124625,0.153400140592587
+"23","Beef and Broccoli Side Wolfram","Trinidad Johnson",1.22914122914123,0.153400140592587
+"24","Beef and Broccoli Side Wolfram","Vincent Ball",1.5,0.153400140592587
+"25","Beef and Broccoli Stir Fry","Katherine Roth",1.04878048780488,0.461945851845101
+"26","Beef and Broccoli Stir Fry","Rachael Price",1.05263157894737,0.461945851845101
+"27","Beef and Broccoli Stir Fry","Trinidad Johnson",1,0.461945851845101
+"28","Beef and Broccoli Stir Fry","Vincent Ball",1.08275862068966,0.461945851845101
+"29","Beef and Broccoli Stir Fry Wolfram","Katherine Roth",1.33572320651944,0.0999045792962888
+"30","Beef and Broccoli Stir Fry Wolfram","Rachael Price",1.25954210124625,0.0999045792962888
+"31","Beef and Broccoli Stir Fry Wolfram","Trinidad Johnson",1.22914122914123,0.0999045792962888
+"32","Beef and Broccoli Stir Fry Wolfram","Vincent Ball",1,0.0999045792962888
+"33","Beef and Squash Kabob","Katherine Roth",1.07368421052632,0.710979319627262
+"34","Beef and Squash Kabob","Rachael Price",1.10632183908046,0.710979319627262
+"35","Beef and Squash Kabob","Trinidad Johnson",1,0.710979319627262
+"36","Beef and Squash Kabob","Vincent Ball",1.08539944903581,0.710979319627262
+"37","Beef and Squash Lasagne Food Truck","Katherine Roth",1.33572320651944,0.647786457472296
+"38","Beef and Squash Lasagne Food Truck","Rachael Price",1.25954210124625,0.647786457472296
+"39","Beef and Squash Lasagne Food Truck","Trinidad Johnson",1.22914122914123,0.647786457472296
+"40","Beef and Squash Lasagne Food Truck","Vincent Ball",1,0.647786457472296
+"41","Beef and Squash Lasagne Wolfram","Katherine Roth",1.33572320651944,0.371196724622101
+"42","Beef and Squash Lasagne Wolfram","Rachael Price",1.25954210124625,0.371196724622101
+"43","Beef and Squash Lasagne Wolfram","Trinidad Johnson",1.22914122914123,0.371196724622101
+"44","Beef and Squash Lasagne Wolfram","Vincent Ball",1.05,0.371196724622101
+"45","Beef Stew","Katherine Roth",1.03703703703704,0.552022942894323
+"46","Beef Stew","Rachael Price",1.025,0.552022942894323
+"47","Beef Stew","Trinidad Johnson",1,0.552022942894323
+"48","Beef Stew","Vincent Ball",1,0.552022942894323
+"49","Caesar Salad","Katherine Roth",1,0.172157123166776
+"50","Caesar Salad","Rachael Price",1.25954210124625,0.172157123166776
+"51","Caesar Salad","Trinidad Johnson",1.22914122914123,0.172157123166776
+"52","Caesar Salad","Vincent Ball",1.83453986742807,0.172157123166776
+"53","Catering","Katherine Roth",1.33572320651944,0.966691395997535
+"54","Catering","Rachael Price",1,0.966691395997535
+"55","Catering","Trinidad Johnson",1.22914122914123,0.966691395997535
+"56","Catering","Vincent Ball",1,0.966691395997535
+"57","Chicken and Onion Kabob","Katherine Roth",1.06839622641509,0.335760224216547
+"58","Chicken and Onion Kabob","Rachael Price",1.12008733624454,0.335760224216547
+"59","Chicken and Onion Kabob","Trinidad Johnson",1,0.335760224216547
+"60","Chicken and Onion Kabob","Vincent Ball",1.09445585215606,0.335760224216547
+"61","Chicken and Veggie Kabobs Food Truck","Katherine Roth",1.33572320651944,-0.217823293442534
+"62","Chicken and Veggie Kabobs Food Truck","Rachael Price",1.25954210124625,-0.217823293442534
+"63","Chicken and Veggie Kabobs Food Truck","Trinidad Johnson",1.22914122914123,-0.217823293442534
+"64","Chicken and Veggie Kabobs Food Truck","Vincent Ball",1,-0.217823293442534
+"65","Chips","Katherine Roth",1.225,0.0127962719440636
+"66","Chips","Rachael Price",1.18518518518519,0.0127962719440636
+"67","Chips","Trinidad Johnson",1,0.0127962719440636
+"68","Chips","Vincent Ball",1.26315789473684,0.0127962719440636
+"69","Christmas Eve Kabobs","Katherine Roth",1.33572320651944,0.704067105623188
+"70","Christmas Eve Kabobs","Rachael Price",1,0.704067105623188
+"71","Christmas Eve Kabobs","Trinidad Johnson",1.22914122914123,0.704067105623188
+"72","Christmas Eve Kabobs","Vincent Ball",1.83453986742807,0.704067105623188
+"73","Christmas Eve Roast Beef","Katherine Roth",1.33572320651944,0.286067366621354
+"74","Christmas Eve Roast Beef","Rachael Price",1,0.286067366621354
+"75","Christmas Eve Roast Beef","Trinidad Johnson",1.22914122914123,0.286067366621354
+"76","Christmas Eve Roast Beef","Vincent Ball",1,0.286067366621354
+"77","Chutney","Katherine Roth",1.09154929577465,0.456975768059504
+"78","Chutney","Rachael Price",1.05,0.456975768059504
+"79","Chutney","Trinidad Johnson",1,0.456975768059504
+"80","Chutney","Vincent Ball",1.05681818181818,0.456975768059504
+"81","Coconut and Beef Vindaloo","Katherine Roth",1.40506329113924,0.211107700328176
+"82","Coconut and Beef Vindaloo","Rachael Price",1.32941176470588,0.211107700328176
+"83","Coconut and Beef Vindaloo","Trinidad Johnson",1,0.211107700328176
+"84","Coconut and Beef Vindaloo","Vincent Ball",1.38235294117647,0.211107700328176
+"85","Coconut Sauce Pint","Katherine Roth",1,-0.00806861420214259
+"86","Coconut Sauce Pint","Rachael Price",1,-0.00806861420214259
+"87","Coconut Sauce Pint","Trinidad Johnson",1.22914122914123,-0.00806861420214259
+"88","Coconut Sauce Pint","Vincent Ball",1.83453986742807,-0.00806861420214259
+"89","Coconut Sauce Quart","Katherine Roth",1.25,0.894209481335788
+"90","Coconut Sauce Quart","Rachael Price",2.5,0.894209481335788
+"91","Coconut Sauce Quart","Trinidad Johnson",1.22914122914123,0.894209481335788
+"92","Coconut Sauce Quart","Vincent Ball",1,0.894209481335788
+"93","Curry","Katherine Roth",1,0.301053868620129
+"94","Curry","Rachael Price",1.46153846153846,0.301053868620129
+"95","Curry","Trinidad Johnson",1.22914122914123,0.301053868620129
+"96","Curry","Vincent Ball",1.15384615384615,0.301053868620129
+"97","Fountain Drink","Katherine Roth",1.63133640552995,0.694475776947548
+"98","Fountain Drink","Rachael Price",1.4368932038835,0.694475776947548
+"99","Fountain Drink","Trinidad Johnson",1.92307692307692,0.694475776947548
+"100","Fountain Drink","Vincent Ball",1.48056537102474,0.694475776947548
+"101","Gift Cards","Katherine Roth",1.44444444444444,0.169569725388778
+"102","Gift Cards","Rachael Price",1.27272727272727,0.169569725388778
+"103","Gift Cards","Trinidad Johnson",1.22914122914123,0.169569725388778
+"104","Gift Cards","Vincent Ball",1.5,0.169569725388778
+"105","Glass Mug","Katherine Roth",1.17741935483871,0.214813121053508
+"106","Glass Mug","Rachael Price",1.25373134328358,0.214813121053508
+"107","Glass Mug","Trinidad Johnson",1,0.214813121053508
+"108","Glass Mug","Vincent Ball",1.10416666666667,0.214813121053508
+"109","Grow-Your-Own-Mushroom Kit","Katherine Roth",1.33572320651944,0.105859843744537
+"110","Grow-Your-Own-Mushroom Kit","Rachael Price",1,0.105859843744537
+"111","Grow-Your-Own-Mushroom Kit","Trinidad Johnson",1.22914122914123,0.105859843744537
+"112","Grow-Your-Own-Mushroom Kit","Vincent Ball",1.33333333333333,0.105859843744537
+"113","Lamb and Veggie Kabob","Katherine Roth",1.05154639175258,0.762879711037155
+"114","Lamb and Veggie Kabob","Rachael Price",1.03252032520325,0.762879711037155
+"115","Lamb and Veggie Kabob","Trinidad Johnson",1.22914122914123,0.762879711037155
+"116","Lamb and Veggie Kabob","Vincent Ball",1.03636363636364,0.762879711037155
+"117","Lamb and Veggie Kabobs Food Truck","Katherine Roth",1.33572320651944,0.317481919908039
+"118","Lamb and Veggie Kabobs Food Truck","Rachael Price",1.25954210124625,0.317481919908039
+"119","Lamb and Veggie Kabobs Food Truck","Trinidad Johnson",1.22914122914123,0.317481919908039
+"120","Lamb and Veggie Kabobs Food Truck","Vincent Ball",1,0.317481919908039
+"121","Lamb and Veggie Kabobs Wolfram","Katherine Roth",1.33572320651944,0.261553722051395
+"122","Lamb and Veggie Kabobs Wolfram","Rachael Price",1.25954210124625,0.261553722051395
+"123","Lamb and Veggie Kabobs Wolfram","Trinidad Johnson",1.22914122914123,0.261553722051395
+"124","Lamb and Veggie Kabobs Wolfram","Vincent Ball",1,0.261553722051395
+"125","Lamb Chops","Katherine Roth",1.03311258278146,0.0629103778576384
+"126","Lamb Chops","Rachael Price",1.00523560209424,0.0629103778576384
+"127","Lamb Chops","Trinidad Johnson",1,0.0629103778576384
+"128","Lamb Chops","Vincent Ball",1.01234567901235,0.0629103778576384
+"129","Larry's Commissary Shirt","Katherine Roth",1.5,0.732648387733934
+"130","Larry's Commissary Shirt","Rachael Price",1,0.732648387733934
+"131","Larry's Commissary Shirt","Trinidad Johnson",1.22914122914123,0.732648387733934
+"132","Larry's Commissary Shirt","Vincent Ball",1.4,0.732648387733934
+"133","Naan","Katherine Roth",1.04379562043796,0.320275312891404
+"134","Naan","Rachael Price",1.02702702702703,0.320275312891404
+"135","Naan","Trinidad Johnson",1,0.320275312891404
+"136","Naan","Vincent Ball",1.05347593582888,0.320275312891404
+"137","Plates/Utensils","Katherine Roth",1.33572320651944,-0.0258415923631559
+"138","Plates/Utensils","Rachael Price",1.25954210124625,-0.0258415923631559
+"139","Plates/Utensils","Trinidad Johnson",1.22914122914123,-0.0258415923631559
+"140","Plates/Utensils","Vincent Ball",12,-0.0258415923631559
+"141","Pork and Pepper Kabob","Katherine Roth",1,0.886095021323997
+"142","Pork and Pepper Kabob","Rachael Price",1.02941176470588,0.886095021323997
+"143","Pork and Pepper Kabob","Trinidad Johnson",1,0.886095021323997
+"144","Pork and Pepper Kabob","Vincent Ball",1.02564102564103,0.886095021323997
+"145","Rice","Katherine Roth",1.03968253968254,0.397394506920585
+"146","Rice","Rachael Price",1.0314465408805,0.397394506920585
+"147","Rice","Trinidad Johnson",1,0.397394506920585
+"148","Rice","Vincent Ball",1.05128205128205,0.397394506920585
+"149","Roll","Katherine Roth",6.73846153846154,0.462166510401943
+"150","Roll","Rachael Price",4.73626373626374,0.462166510401943
+"151","Roll","Trinidad Johnson",4.66666666666667,0.462166510401943
+"152","Roll","Vincent Ball",5.2289156626506,0.462166510401943
+"153","Salmon and Wheat Bran Salad","Katherine Roth",1.01955671447197,0.187267393157314
+"154","Salmon and Wheat Bran Salad","Rachael Price",1.01365546218487,0.187267393157314
+"155","Salmon and Wheat Bran Salad","Trinidad Johnson",1,0.187267393157314
+"156","Salmon and Wheat Bran Salad","Vincent Ball",1.03203661327231,0.187267393157314
+"157","Salmon and Wheat Bran Salad Food Truck","Katherine Roth",1.33572320651944,0.13899676870011
+"158","Salmon and Wheat Bran Salad Food Truck","Rachael Price",1.25954210124625,0.13899676870011
+"159","Salmon and Wheat Bran Salad Food Truck","Trinidad Johnson",1.22914122914123,0.13899676870011
+"160","Salmon and Wheat Bran Salad Food Truck","Vincent Ball",1,0.13899676870011
+"161","Salmon and Wheat Bran Salad Wolfram","Katherine Roth",1.33572320651944,0.857381626589803
+"162","Salmon and Wheat Bran Salad Wolfram","Rachael Price",1.25954210124625,0.857381626589803
+"163","Salmon and Wheat Bran Salad Wolfram","Trinidad Johnson",1.22914122914123,0.857381626589803
+"164","Salmon and Wheat Bran Salad Wolfram","Vincent Ball",1.16666666666667,0.857381626589803
+"165","Soya and Basil Salad","Katherine Roth",1,0.185725108537706
+"166","Soya and Basil Salad","Rachael Price",1.0625,0.185725108537706
+"167","Soya and Basil Salad","Trinidad Johnson",1,0.185725108537706
+"168","Soya and Basil Salad","Vincent Ball",1,0.185725108537706
+"169","Spring Greens","Katherine Roth",1,0.559787274038379
+"170","Spring Greens","Rachael Price",1,0.559787274038379
+"171","Spring Greens","Trinidad Johnson",1.22914122914123,0.559787274038379
+"172","Spring Greens","Vincent Ball",1,0.559787274038379
+"173","Thanksgiving Stirfry","Katherine Roth",1.33572320651944,0.0767115169989965
+"174","Thanksgiving Stirfry","Rachael Price",1.25954210124625,0.0767115169989965
+"175","Thanksgiving Stirfry","Trinidad Johnson",1.22914122914123,0.0767115169989965
+"176","Thanksgiving Stirfry","Vincent Ball",1.6,0.0767115169989965
+"177","Thanksgiving Vindaloo","Katherine Roth",1.33572320651944,0.0829003676680574
+"178","Thanksgiving Vindaloo","Rachael Price",1.25954210124625,0.0829003676680574
+"179","Thanksgiving Vindaloo","Trinidad Johnson",1.22914122914123,0.0829003676680574
+"180","Thanksgiving Vindaloo","Vincent Ball",1,0.0829003676680574
+"181","Water Bottles","Katherine Roth",1.22222222222222,0.153957731845841
+"182","Water Bottles","Rachael Price",1.42857142857143,0.153957731845841
+"183","Water Bottles","Trinidad Johnson",1,0.153957731845841
+"184","Water Bottles","Vincent Ball",3,0.153957731845841
+"185","Yogurt","Katherine Roth",1.07829181494662,0.103238153027912
+"186","Yogurt","Rachael Price",1.072,0.103238153027912
+"187","Yogurt","Trinidad Johnson",1.22222222222222,0.103238153027912
+"188","Yogurt","Vincent Ball",1.05487804878049,0.103238153027912

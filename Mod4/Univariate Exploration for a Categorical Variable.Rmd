@@ -1,0 +1,80 @@
+---
+title: "Univariate Exploration for a Categorical Variable"
+output: html_notebook
+author: "Ashish Khandelwal"
+---
+
+#################################################################################################
+Important Note - The results you see in the video and in this notebook may diverge slightly due to differences in the datasets (we provide small dataset to you).
+##################################################################################################
+
+
+```{r}
+#install.packages("ggplot2")
+#install.packages("dplyr")
+library(dplyr)
+library(ggplot2)
+library(stringr)
+```
+
+
+In this lesson we will see how to visually epxlore a Categorical Variable. 
+
+In a categorical variable, you visualize either their frequencies or proportions. 
+
+For exploring catgeorical variable, we create bar charts 
+
+
+Read the data as df
+```{r}
+df <- read.csv("ities_prem.csv")
+```
+
+
+```{r fig.width = 15, fig.height = 8}
+p1 <- ggplot(data = df %>% filter(Premium ==1), mapping = aes(x= LineItem)) + geom_bar()
+
+p1
+```
+
+We see that the most dominant Lineitem (with almost 50% proportion) among the one with very high prices are Catering. This makes sense. 
+
+Next, dominant ones are "Salmon and Wheat Bran Salad" and "Grow-Your-Own-Mushroom-Kits"
+
+
+
+If we want to flip the coordinates, we can chnage another component "coordinate"'s default setting to "flip"
+
+```{r fig.width = 15, fig.height = 8}
+p1 <- ggplot(data = df %>% filter(Premium ==1), mapping = aes(x= LineItem)) + geom_bar(stat =)
+
+p1 + coord_flip()
+```
+
+
+
+Showing percentages instead of count - using "y = ..count../ sum(..count..)"
+
+Note the "aes" in the "geom_bar" is for managing the what goes on the y-axis
+```{r fig.width = 15, fig.height = 8}
+p1 <- ggplot(data = df %>% filter(Premium ==1), mapping = aes(x= LineItem, y = Price)) + 
+       geom_bar(aes(y=..count../sum(..count..))) +
+        scale_y_continuous(labels = scales::percent_format())
+
+p1 
+```
+
+
+Percentage chart with coordinates flipped
+
+```{r fig.width = 15, fig.height = 8}
+p1 <- ggplot(data = df %>% filter(Premium ==1), mapping = aes(x= LineItem, y = Price)) + 
+       geom_bar(aes(y=..count../sum(..count..))) +
+        scale_y_continuous(labels = scales::percent_format())
+
+p1 + coord_flip()
+
+```
+
+
+
